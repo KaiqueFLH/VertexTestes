@@ -1,0 +1,42 @@
+<div class="flex h-screen w-screen">
+
+
+    <h1 class="bg-[#C7D5E2] text-2xl p-5">VERTEX</h1>
+
+    <div class=" flex pl-20 pb-10 items-center fundo1 h-screen w-1/2 bg-slate-200">
+        <img class="w-72 h-72" src="../../assets/logoVertex-removebg-preview.png" alt="">
+    </div>
+
+    
+
+    <div class="flex justify-center items-center fundo2 h-screen w-1/2">
+        <div class="gap-16 flex flex-col justify-center items-center">
+            <h1 class="text-white font-light text-2xl pt-14">Acesse a sua Conta</h1>
+
+            <div class=" gap-14 flex flex-col justify-center items-center">
+                <form class="flex flex-col justify-center items-center">
+                    <div class="w-72 flex justify-center">
+                        <fa-icon class="flex justify-center items-center w-10 h-10 bg-slate-200"
+                            [icon]="faUser"></fa-icon>
+                        <input type="text" placeholder="Usuário" class="p-2 mb-2">
+                        <div class="w-10 h-10 bg-white"></div>
+                    </div>
+
+                    <div class="w-[285px] flex justify-center">
+                        <fa-icon class="flex justify-center items-center w-10 h-10 bg-slate-200"
+                            [icon]="faKey"></fa-icon>
+                        <input type="text" placeholder="Senha" class="p-2 mb-2">
+                        <fa-icon class="flex justify-center items-center w-10 h-10 bg-white" [icon]="faEye"></fa-icon>
+                    </div>
+                    <label class="flex justify-end w-[270px] text-white">Esqueceu sua senha?</label>
+                </form>
+
+                <div class="flex flex-col items-center text-center">
+                    <button class=" w-44 border-2 border-[#2E5DA6] rounded-[3px] p-2 m-2 bg-[#2E5DA6] text-slate-100">Entrar</button>
+                    <label class="text-white">Não possui uma conta?</label>
+                    <label class="text-white"><span class="text-white font-bold">Clique aqui</span> e cadastre-se agora!</label>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
