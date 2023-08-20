@@ -1,42 +1,78 @@
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400&family=Manrope:wght@200;300;400;500&display=swap');
+</style>
+
 <div class="flex h-screen w-screen">
 
 
-    <h1 class="bg-[#C7D5E2] text-2xl p-5">VERTEX</h1>
+  <h1 style="font-family: 'Manrope'; font-weight: lighter;" class="bg-[#C7D5E2] text-4xl p-7 text-[#092C4C]">VERTEX</h1>
 
-    <div class=" flex pl-20 pb-10 items-center fundo1 h-screen w-1/2 bg-slate-200">
-        <img class="w-72 h-72" src="../../assets/logoVertex-removebg-preview.png" alt="">
+  <div class=" flex pl-10 pb-5 items-center fundo1 h-screen w-1/2 bg-slate-200">
+    <img class="w-72 h-72" src="../../assets/logoVertex-removebg-preview.png" alt="">
+  </div>
+
+
+
+  <div class="fundo2 flex min-h-full flex-col justify-center w-1/2">
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm m-10">
+      <h2 style="font-family: 'Manrope'; font-weight: lighter;"
+        class="text-center text-2xl font-bold leading-9 tracking-tight text-white">Acesse sua Conta</h2>
     </div>
 
-    
+    <div class="sm:mx-auto sm:w-full sm:max-w-sm">
+      <form class="space-y-7" action="#" method="POST">
 
-    <div class="flex justify-center items-center fundo2 h-screen w-1/2">
-        <div class="gap-16 flex flex-col justify-center items-center">
-            <h1 class="text-white font-light text-2xl pt-14">Acesse a sua Conta</h1>
+        <!-- Div Input Endereço de Email -->
+        <div>
+          <div>
+            <label style="font-family: 'Manrope'; font-weight: lighter;" for="email"
+            class="block text-sm font-medium leading-6 text-white">Endereço de E-mail</label>
+          </div>
 
-            <div class=" gap-14 flex flex-col justify-center items-center">
-                <form class="flex flex-col justify-center items-center">
-                    <div class="w-72 flex justify-center">
-                        <fa-icon class="flex justify-center items-center w-10 h-10 bg-slate-200"
-                            [icon]="faUser"></fa-icon>
-                        <input type="text" placeholder="Usuário" class="p-2 mb-2">
-                        <div class="w-10 h-10 bg-white"></div>
-                    </div>
-
-                    <div class="w-[285px] flex justify-center">
-                        <fa-icon class="flex justify-center items-center w-10 h-10 bg-slate-200"
-                            [icon]="faKey"></fa-icon>
-                        <input type="text" placeholder="Senha" class="p-2 mb-2">
-                        <fa-icon class="flex justify-center items-center w-10 h-10 bg-white" [icon]="faEye"></fa-icon>
-                    </div>
-                    <label class="flex justify-end w-[270px] text-white">Esqueceu sua senha?</label>
-                </form>
-
-                <div class="flex flex-col items-center text-center">
-                    <button class=" w-44 border-2 border-[#2E5DA6] rounded-[3px] p-2 m-2 bg-[#2E5DA6] text-slate-100">Entrar</button>
-                    <label class="text-white">Não possui uma conta?</label>
-                    <label class="text-white"><span class="text-white font-bold">Clique aqui</span> e cadastre-se agora!</label>
-                </div>
-            </div>
+          <div class="flex items-center justify-center">
+            <fa-icon class="flex justify-center items-center w-10 h-10 bg-slate-200" [icon]="faUser"></fa-icon>
+            <input style="font-family: 'Inter';" id="email" name="email" type="email" autocomplete="email" required
+              class="block h-10 w-full border-0 py-1.5 px-3 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
         </div>
+
+
+        <!-- Div input de Senha -->
+        <div>
+          <div class="flex items-center justify-between">
+            <label style="font-family: 'Manrope';font-weight: lighter;" for="password"
+              class="block text-sm leading-6 text-white">Senha</label>
+          </div>
+
+          <div class=" flex justify-center">
+            <fa-icon class="flex justify-center items-center w-10 h-10 bg-slate-200" [icon]="faKey"></fa-icon>
+            <input id="password" name="password" type="password" autocomplete="current-password" required
+            class="block h-10 w-full border-0 py-1.5 px-3 text-black shadow-sm ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6">
+          </div>
+          <div class="text-sm flex justify-end">
+            <a href="#" style="font-family: 'Inter';"
+              class="font-semibold text-indigo-600 hover:text-indigo-500">Esqueceu sua senha?</a>
+          </div>
+        </div>
+
+        <!-- Div do botão de Enviar -->
+        <div class="flex justify-center">
+          <button type="submit"
+            class="flex w-44 h-10 items-center justify-center rounded-md bg-indigo-600 text-sm font-semibold leading-6 text-white shadow-sm
+            hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">
+            Entrar</button>
+        </div>
+      </form>
+      <br>
+
+      <!-- Texto Não possui conta -->
+      <p class="text-center text-sm text-white">
+        Não possui uma conta?
+        <br>
+        <a [routerLink]="['/cadastro']" class="font-semibold leading-6 text-indigo-600 hover:text-indigo-500">Clique
+          aqui</a>
+        e cadastre-se agora!
+      </p>
     </div>
+  </div>
 </div>
